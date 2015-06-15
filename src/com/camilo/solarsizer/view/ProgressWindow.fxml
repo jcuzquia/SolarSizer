@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="150.0" maxWidth="300.0" minHeight="150.0" minWidth="300.0" prefHeight="150.0" prefWidth="300.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.solarsizer.view.ProgressDialogController">
+	<children>
+		<Button fx:id="cancelButton" layoutX="118.0" layoutY="105.0" mnemonicParsing="false" text="Cancel" />
+		<ProgressBar fx:id="progressBar" layoutX="18.0" layoutY="28.0" prefWidth="200.0" progress="0.0" styleClass="background" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="28.0" />
+		<Label fx:id="progressLabel" layoutX="18.0" layoutY="65.0" text="Working" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="400.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.solarsizer.view.TimeZoneDialogController">
+	<children>
+		<ComboBox fx:id="timeZoneComboBox" layoutX="125.0" layoutY="24.0" prefWidth="150.0" />
+		<Label layoutX="65.0" layoutY="66.0" text="Please Select A Time Zone Before Continuing" AnchorPane.bottomAnchor="260.0" AnchorPane.topAnchor="66.0" />
+		<Button fx:id="acceptTimeZoneButton" layoutX="89.0" layoutY="273.0" mnemonicParsing="false" onAction="#handlesTimeZoneSelection" text="Accept" />
+      <GridPane layoutX="135.0" layoutY="148.0" prefHeight="90.0" prefWidth="131.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="134.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="farenheitRB" mnemonicParsing="false" onAction="#handleRBChange" text="Farenheit" />
+            <RadioButton fx:id="celciusRB" mnemonicParsing="false" onAction="#handleRBChange" text="Celcius" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="cancelButton" layoutX="241.0" layoutY="273.0" mnemonicParsing="false" onAction="#handlesCancelButton" text="Cancel" />
+	</children>
+</AnchorPane>

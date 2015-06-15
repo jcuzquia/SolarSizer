@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="800.0" prefWidth="1500.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.solarsizer.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Open" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Import Weather Data">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleWeatherFileImport" text="NOAA" />
+                        <Menu fx:id="tmy3DataSelector" mnemonicParsing="false" text="TMY3 Data" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Export Data">
+                     <items>
+                        <MenuItem fx:id="heatMapConsumptionExportItem" mnemonicParsing="false" onAction="#handleHeatMapConsumptionExport" text="Export Heat Map Data" />
+                        <MenuItem fx:id="heatMapCurtailmentExportItem" mnemonicParsing="false" onAction="#handleHeatMapWeatherDataExport" text="Export Heat Map Weather Data" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleIntervalDataNormalExport" text="Export Regular Interval Data" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="To do" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
